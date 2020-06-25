@@ -1,4 +1,8 @@
-FROM python:3.7
+# x86
+# FROM python:3.7
+# Raspberry Pi
+FROM arm32v7/python:3.7-buster
+
 RUN pip install pipenv
 
 COPY Pipfile* /tmp/

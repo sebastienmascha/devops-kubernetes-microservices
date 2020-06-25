@@ -9,7 +9,7 @@ $ docker build -f Dockerfile -t $DOCKER_USER_ID/sentiment-analysis-logic .
 
 ```
 $ docker run -d -p 5050:5000 $DOCKER_USER_ID/sentiment-analysis-logic
-$ docker run --name k8s_sa_logic -d -p 5050:5000 $DOCKER_USER_ID/sentiment-analysis-logic
+$ docker run --name k8s_sa_logic -d -p 5050:5000 $DOCKER_USER_ID/sentiment-analysis-logic:arm32
 ```
 
 The app is listening by default on port 5000. The 5050 port of the host machine is mapped to the port 5000 of the container.
