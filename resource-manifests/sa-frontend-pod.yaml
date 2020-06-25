@@ -6,7 +6,7 @@ metadata:
     app: sa-frontend                                 # 2
 spec:                                                # 3
   containers:
-    - image: smascha/sentiment-analysis-frontend
+    - image: smascha/sentiment-analysis-frontend:latest
       name: sa-frontend                              # 5
       ports:
         - containerPort: 80                          # 6
