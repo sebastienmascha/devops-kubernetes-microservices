@@ -5,12 +5,12 @@
 ` $ java -jar sentiment-analysis-web-0.0.1-SNAPSHOT.jar --sa.logic.api.url=http://localhost:5000 ` 
 
 ## Building the container
-` $ docker build -f Dockerfile -t $DOCKER_USER_ID/sentiment-analysis-web-app . `
+` $ docker build -f Dockerfile -t $DOCKER_USER_ID/sentiment-analysis-web-app:rpi . `
 
 ## Running the container
 ``` 
 $ docker run -d -p 8080:8080 -e SA_LOGIC_API_URL='http://<container_ip or docker machine ip>:5000' $DOCKER_USER_ID/sentiment-analysis-web-app  
-$ docker run --name k8s_sa_webapp -d -p 8080:8080 --network k8s_sa -e SA_LOGIC_API_URL='http://k8s_sa_logic:5000' $DOCKER_USER_ID/sentiment-analysis-web-app 
+$ docker run --name k8s_sa_webapp -d -p 8080:8080 --network k8s_sa -e SA_LOGIC_API_URL='http://k8s_sa_logic:5000' $DOCKER_USER_ID/sentiment-analysis-web-app:rpi
 ```
 
 ### Setting the network
