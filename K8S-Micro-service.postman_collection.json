@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "77adba0c-8d50-4d85-95c5-aed61971396e",
+		"name": "K8S-Micro-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Logic - Get service health ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sentence\": \"It is very funny !\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5050/analyse/sentiment",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"analyse",
+						"sentiment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WebApp - Get service health",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sentence\": \"It is very funny !\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sentiment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sentiment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
