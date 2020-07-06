@@ -36,7 +36,17 @@ kubectl apply -f sa-logic-deployment.yaml --record
 
 ```
 
+# Access the application
+Pont SSH entre localhost et la machine host du load balancer.
+``` sh 
+# Find lb's host 
+kubectl get svc
 
+# Create SSH bridge
+ssh -L 9999:localhost:3333 pi@192.168.1.226
+```
+
+# Ressources
 To learn more about Kubernetes and other related topics check the following examples with the **Sentiment Analysis** application:
 
 * [Kubernetes Volumes in Practice](https://rinormaloku.com/kubernetes-volumes-in-practice/):
@@ -46,5 +56,5 @@ To learn more about Kubernetes and other related topics check the following exam
 * [Simple CI/CD for Kubernetes with Azure DevOps](https://www.orange-networks.com/blogs/224-azure-devops-ci-cd-pipeline-to-deploy-to-kubernetes)
 * Envoy series - to be added!
 
-### Ressources
+### Source
 This repository contains the source files needed to follow the series [Kubernetes and everything else](https://rinormaloku.com/series/kubernetes-and-everything-else/) or summarized as an article in [Learn Kubernetes in Under 3 Hours: A Detailed Guide to Orchestrating Containers](https://medium.freecodecamp.org/learn-kubernetes-in-under-3-hours-a-detailed-guide-to-orchestrating-containers-114ff420e882)

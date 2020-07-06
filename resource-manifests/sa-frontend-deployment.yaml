@@ -21,7 +21,7 @@ spec:
         app: sa-frontend                                  # 6
     spec:
       containers:
-        - image: smascha/sentiment-analysis-frontend
+        - image: smascha/sentiment-analysis-frontend:kube
           imagePullPolicy: Always                         # 7
           name: sa-frontend
           ports:
